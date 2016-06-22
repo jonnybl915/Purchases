@@ -48,8 +48,15 @@ public class PurchasesController {
     }
 
         @RequestMapping(path = "/", method = RequestMethod.GET)
-        public String home (Model model) {
-            Iterable<Purchase> purchase = purchases.findAll();
+        public String home (Model model, String category) {
+
+            Iterable<Purchase> purchase;
+            if (category != null) {
+                purchase = purchases.findByCategory(category);
+            }
+            else {
+               purchase = purchases.findAll();
+            }
             model.addAttribute("purchases", purchase);
 
             return "home";
