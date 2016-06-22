@@ -5,6 +5,27 @@
     <title>HOME</title>
 </head>
 <body>
-Hello World
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Category</td>
+        <td>Credit Card</td>
+        <td>CVV</td>
+        <td>Date</td>
+    </tr>
+
+        {{#purchases}}
+    <tr>
+        <td>{{customer.name}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{category}}</td>
+        <td>{{credit_card}}</td>
+        <td>{{cvv}}</td>
+        <td>{{date}}</td>
+    </tr>
+        {{/purchases}}
+
+</table>
 </body>
 </html>
