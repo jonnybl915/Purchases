@@ -28,6 +28,16 @@ public class Purchase {
         this.customer = customer;
     }
 
+
+    public Purchase(int id, String date, String credit_card, String cvv, String category, Customer customer) {
+        this.id = id;
+        this.date = date;
+        this.credit_card = credit_card;
+        this.cvv = cvv;
+        this.category = category;
+        this.customer = customer;
+    }
+
     public Purchase() {
     }
 }
