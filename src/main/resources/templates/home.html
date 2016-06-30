@@ -36,5 +36,12 @@
         {{/purchases}}
 
 </table>
+
+{{#showPrev}}
+    <a href="?/page={{prevPage}}{{#category}}&category={{.}}{{/category}}">Previous</a>
+{{/showPrev}}
+    {{#show}}
+    <a href="?/page={{nextPage}}{{#category}}&category={{.}}{{/category}}">Next</a>
+    {{/showNext}}
 </body>
 </html>
